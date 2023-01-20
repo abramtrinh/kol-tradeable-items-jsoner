@@ -6,10 +6,12 @@ This tool uses [Colly](https://github.com/gocolly/colly).
 
 ###  Example
 ```shell
-
+go build .
+.\kol-tradeable-items-jsoner.exe (-u)
 ```
 
-
+## TODO
+Possibly use [goquery](https://github.com/PuerkitoBio/goquery) instead.
 
 ## The main problem:
 If you wanted the item name, item number, and tradeability, you would have to visit each item's wiki url to get that data.
@@ -39,3 +41,4 @@ After that users can just run without the "-u" flag since HTML file exists local
 
 Users can rerun with "-u" flag if they need to re-update the HTML file (if new tradeable items are created).
 
+Users can change filenames by modifying the const variables.

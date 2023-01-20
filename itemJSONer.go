@@ -13,8 +13,12 @@ import (
 )
 
 const URL = "https://kol.coldfront.net/newmarket/"
+
+// Another website option to get HTML from.
+const URL2 = "https://g1wjmf0i0h.execute-api.us-east-2.amazonaws.com/default/itemindex"
 const htmlFile = "newmarket.html"
 const htmlFilePath = "file://./" + htmlFile
+const jsonFile = "items.json"
 
 var updateFileFlag = flag.Bool("u", false, "bool to get/update HTML file from URL")
 
@@ -77,7 +81,7 @@ func main() {
 		return
 	}
 
-	os.WriteFile("items.json", content, 0644)
+	os.WriteFile(jsonFile, content, 0644)
 	fmt.Printf("Wrote item data to %s", htmlFile)
 }
 
